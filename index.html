@@ -1240,6 +1240,35 @@ img { display: block; max-width: 100%; }
   .fg-mid { flex-direction: column; }
   .profile-text { padding: 40px 24px; }
 }
+   /* Estilo Adicional para o Instagram no Footer */
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px; /* Espaço para não ficar colado no copyright */
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-cond);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  transition: color .3s ease;
+}
+
+.footer-social a:hover {
+  color: var(--rs-red); /* Fica vermelho ao passar o mouse */
+}
+
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+}
 </style>
 </head>
 <body>
@@ -1645,7 +1674,7 @@ Também atendo crianças de 2 a 10 anos, acompanhando o neurodesenvolvimento, a 
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- FOOTER ATUALIZADO -->
 <footer class="footer">
   <div class="footer-brand-wrap">
     <div class="footer-logo-c">
@@ -1653,11 +1682,27 @@ Também atendo crianças de 2 a 10 anos, acompanhando o neurodesenvolvimento, a 
     </div>
     <span class="footer-brand-name">Latipha Lauanny</span>
   </div>
-  <p class="footer-copy">© 2025 · Todos os direitos reservados</p>
+
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <p class="footer-copy">© 2025 · Todos os direitos reservados</p>
+    
+    <!-- LINK DO INSTAGRAM -->
+    <div class="footer-social">
+      <a href="https://www.instagram.com/psi.latiphalauanny" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+        @psi.latiphalauanny
+      </a>
+    </div>
+  </div>
+
   <p class="footer-info">Maranhão, Brasil · Psicologia Online</p>
 </footer>
-
-<script>
+   
+   <script>
 // Scroll reveal
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
